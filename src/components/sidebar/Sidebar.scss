@@ -1,0 +1,55 @@
+@import "../../setting/variable.scss";
+
+.sidebar {
+    position: fixed;
+    z-index: 100;
+    top: 15rem;
+    left: 1rem;
+
+    
+    &__list {
+        flex-direction: column;
+    }
+    &__item {
+        margin-top: 1rem;  
+    }
+    &__link {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        font-size: 1.6rem;
+        font-weight: 500;
+        cursor: pointer;
+        background-image: linear-gradient(to right bottom, ($color-personal-dark)50%, $color-personal-light);
+        color: $color-personal-light;
+        box-shadow: $shadow;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            background-image: linear-gradient(to left top, ($color-personal-dark)50%, $color-personal-light);
+            transform: translateX(0.3rem);
+        }
+    }
+    &__name {
+        width: 10rem;
+        padding: 1rem ;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: 500;
+        color:$color-white;
+        background-color: rgba($color-black,.5);
+        clip-path: polygon(10% 0, 100% 0%, 100% 100%, 10% 100%, 10% 70%, 0 50%, 10% 30%);
+        transform: translateX(-1rem) scaleX(0.5);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &__link:hover + &__name {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0.5rem) scaleX(1.05);
+    }
+}
+
+

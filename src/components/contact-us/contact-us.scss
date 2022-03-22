@@ -1,0 +1,86 @@
+@import "../../setting/variable.scss";
+.contact-us {
+    display: grid;
+    grid-template-rows: 1fr auto minmax(25%, auto);
+    font-size: 1.5rem;
+    overflow: hidden;
+
+    &__contact {
+        grid-row: 1/2;
+        background-color:$color-primary-dark;
+        padding: 5rem 0;
+    }
+    &__list {
+        flex-direction: column;
+        font-size: 1.7rem;
+        font-weight: 300;
+        color: $color-primary-light;
+    
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 2rem;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+        h4 {
+            grid-column: 2/-1;
+            align-self: center;
+            font-weight: 500;
+
+        }
+        span {
+            color: $color-primary;
+            grid-column: 1/2;
+            font-size: 3rem;
+            font-weight: 700;
+        }
+    }
+
+    &__follow {
+        grid-row: 2/3;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+       
+        h3 {
+            font-size: 3rem;
+            font-weight:300;
+            padding: 2rem 2rem 1rem 2rem;
+            text-transform:capitalize;
+        }
+        &-icon {
+            margin-top: 2rem;
+           
+            span {
+                font-size: 4rem;
+                font-weight: 700;
+                color: $color-secondary;
+                
+                &:not(:last-child) {
+                    margin-right: 5rem;
+                }
+            }
+        }
+    }
+    &__follow , &__copyright {
+        color: $color-primary-dark;
+        background-color: $color-primary-light;
+    }
+    &__copyright {
+        grid-row: 3/-1;
+        font-weight: 400;
+        text-align: center;
+        padding: 2rem 5rem 5rem 5rem;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .contact-us{
+        height: 59%;
+        align-self: flex-end;
+        border-radius: 0;
+
+    }
+  }

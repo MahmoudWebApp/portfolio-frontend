@@ -1,0 +1,28 @@
+@import "../../setting/variable.scss";
+.courses {
+  height: 100vh;
+  background-color:rgba($color-personal-light,.5);
+  text-align: center;
+  height: 100%;
+  padding: 10rem 4rem 15rem 8rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 4rem;
+  &__title {
+    font-size: 5rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: $color-personal;
+    &::first-letter{
+      color:$color-secondary;
+    }
+  }
+ 
+  &__list {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../setting/variable.scss";
+.profile {
+    position: absolute;
+    top: 20rem;
+    right: 5rem;
+    z-index: 5;
+    transition: all 0.2s;
+    border: 1rem solid $color-secondary-dark;
+    border-radius: 5px;
+    img {
+        height: 25rem;
+        transition: all 0.2s;
+        cursor: pointer;
+        
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .profile {
+        top: 10rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        height: 15rem;
+        width: 15rem;
+
+        img {
+            height: 14rem;
+            width: 14rem;
+            border-radius: 50%;
+        }
+    }
+}
